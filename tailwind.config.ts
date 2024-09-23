@@ -8,10 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      container: {
+        center: true,
+        // padding: "1.5rem",
+        padding: {
+          DEFAULT: "1.5rem", // default padding for mobile
+          sm: "2rem", // padding for small screens (sm)
+          lg: "5rem", // larger padding for large screens (lg)
+          xl: "6rem", // even larger padding for extra-large screens (xl)
+        },
       },
+      transitionDuration: {
+        300: '300ms', // Add custom transition duration
+      }
     },
   },
   plugins: [],
