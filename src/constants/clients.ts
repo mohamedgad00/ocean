@@ -1,3 +1,5 @@
+import { Client } from "@/types/interfaces";
+
 export const clients: Client[] = [
   {
     imageUrl: "/companies/company-1.svg",
