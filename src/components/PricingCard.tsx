@@ -1,4 +1,3 @@
-
 import { Pricing, PricingMode } from "@/types/interfaces";
 import { FC } from "react";
 import Button from "@/components/Button";
@@ -6,6 +5,7 @@ import { Check } from "lucide-react";
 
 interface PricingCardProps extends Pricing {
   mode: PricingMode;
+  index: number;
 }
 
 const PricingCard: FC<PricingCardProps> = ({
@@ -17,6 +17,7 @@ const PricingCard: FC<PricingCardProps> = ({
   isMostPopular,
   glowPosition,
   mode,
+  index,
 }) => {
   return (
     <article
@@ -25,6 +26,8 @@ const PricingCard: FC<PricingCardProps> = ({
           ? "border-2 border-sky-700 bg-slate-800"
           : "border border-slate-700"
       } rounded-lg overflow-hidden`}
+      data-aos="fade-down"
+      data-aos-delay={(index + 1) * 100}
     >
       <figure
         className={`absolute w-72 h-60 bg-sky-600 -z-10 rounded-full blur-3xl opacity-20 -top-12 ${
@@ -44,7 +47,11 @@ const PricingCard: FC<PricingCardProps> = ({
           /{mode === "monthly" ? "month" : "year"}
         </small>
       </h1>
-      <Button variant={isMostPopular ? "primary" : "secondary"} isFullSize>
+      <Button
+        variant={isMostPopular ? "primary" : "secondary"}
+        isFullSize
+        hasAOS={false}
+      >
         buy plan
       </Button>
       <ul className="space-y-4">

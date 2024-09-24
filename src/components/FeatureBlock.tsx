@@ -25,10 +25,13 @@ const FeatureBlock: FC<FeatureBlockProps> = ({
         height={370}
         alt="feature"
         className="basis-5/12 w-full shadow-lg"
+        data-aos={!isReversed ? "fade-right" : "fade-left"}
       />
       <div className="basis-6/12 flex flex-col md:text-center lg:text-start gap-4 md:gap-6">
         <Heading title={title} />
-        <p className="lg:max-w-[40rem]">{content}</p>
+        <p className="lg:max-w-[40rem]" data-aos="fade-down">
+          {content}
+        </p>
       </div>
     </article>
   );

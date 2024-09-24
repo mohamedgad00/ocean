@@ -4,12 +4,13 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "outline";
   isFullSize?: boolean;
   children: ReactNode;
+  hasAOS?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
   variant = "primary",
-  isFullSize,
   children,
+  hasAOS = true,
 }) => {
   return (
     <button
@@ -20,6 +21,8 @@ const Button: FC<ButtonProps> = ({
           ? "btn-secondary"
           : "btn-outline"
       }`}
+      data-aos={hasAOS ? "fade-down" : ""}
+      data-aos-delay={hasAOS ? "400" : ""}
     >
       {children}
     </button>

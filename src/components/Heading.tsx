@@ -12,6 +12,7 @@ const Heading: FC<HeadingProps> = ({ title, isCentered }) => {
       className={`${
         isCentered && "text-center"
       } bg-clip-text text-transparent bg-gradient-to-tr from-sky-200 via-sky-500 to-sky-200 font-extrabold text-3xl sm:text-4xl lg:text-5xl`}
+      data-aos="fade-down"
     >
       {title}
     </h1>
