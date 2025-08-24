@@ -10,14 +10,14 @@ export const testimonials: Testimonial[] = [
   },
   {
     imageUrl: "/testimonials/user-2.jpg",
-    name: "hessen nasser",
+    name: "John Doe",
     role: "startup founder",
     review:
       "Game-changer for our engineering team, revolutionizing project management and collaboration.",
   },
   {
     imageUrl: "/testimonials/user-3.jpg",
-    name: "mo3ty reda",
+    name: "Jane Smith",
     role: "team member",
     review:
       "Simplified project management, improved communication, and empowered decision-making. Highly endorsed!",
